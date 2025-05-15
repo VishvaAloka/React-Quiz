@@ -1,0 +1,339 @@
+/* Button styles with animations */
+.MuiButton-root {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  text-transform: capitalize !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.MuiButton-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.MuiButton-root:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.MuiButton-root:hover:before {
+  left: 100%;
+}
+
+/* Message styles with bounce animation */
+.message {
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 20px !important;
+  animation: bounceIn 0.6s ease-out;
+}
+
+.message-correct {
+  color: #4caf50 !important;
+  font-weight: bold !important;
+  text-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+}
+
+.message-incorrect {
+  color: #f44336 !important;
+  font-weight: bold !important;
+  text-shadow: 0 2px 4px rgba(244, 67, 54, 0.3);
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(-20px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1) translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Next button with pulse animation */
+.next-button {
+  display: flex !important;
+  margin: 0 auto !important;
+  margin-top: 20px !important;
+  animation: fadeInUp 0.5s ease-out;
+  position: relative;
+}
+
+.next-button:hover {
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4) !important;
+  color: white !important;
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.3) !important;
+}
+
+.next-button.pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Score wrapper with gradient background */
+.score-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 16px;
+  border-radius: 12px;
+  color: white;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.score-wrapper:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 70%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.score-text {
+  font-weight: 600;
+  font-size: 16px;
+  z-index: 1;
+  position: relative;
+}
+
+/* Loading animation for progress bar */
+.progress-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+.progress-container:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  animation: slideProgress 1.5s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes slideProgress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Card animations */
+.MuiCard-root {
+  animation: fadeInScale 0.5s ease-out;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.MuiCard-root:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Star animations */
+.star-icon {
+  transition: all 0.3s ease;
+  margin: 0 2px;
+}
+
+.star-icon:hover {
+  transform: rotate(360deg) scale(1.2);
+  color: #ffd700 !important;
+}
+
+.star-icon.filled {
+  animation: starPulse 1s ease-in-out;
+  color: #ffd700 !important;
+}
+
+@keyframes starPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Correct/Incorrect button states */
+.MuiButton-containedPrimary.correct-answer {
+  background: linear-gradient(45deg, #4caf50, #66bb6a) !important;
+  animation: correctPulse 0.8s ease-out;
+}
+
+.MuiButton-containedPrimary.incorrect-answer {
+  background: linear-gradient(45deg, #f44336, #ef5350) !important;
+  animation: shake 0.8s ease-out;
+}
+
+@keyframes correctPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+/* Custom icons with animations */
+.animated-icon {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.animated-icon:hover {
+  transform: rotate(360deg);
+}
+
+.bounce-icon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Particle effect for correct answers */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: #ffd700;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: float-up 2s ease-out forwards;
+}
+
+@keyframes float-up {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.5);
+  }
+}

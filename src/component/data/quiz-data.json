@@ -1,0 +1,55 @@
+[
+    {
+      "category": "React%3A%20JS",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "React%20is%20mainly%20used%20for%20builing%20______",
+      "correct_answer": "User%20Interface",
+      "incorrect_answers": [
+        "Database",
+        "Connectivity",
+        "Design%20Platform"
+      ]
+    },
+    {
+      "category": "ReactJS",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": " How%20can%20you%20access%20the%20state%20of%20a%20component%20from%20inside%20of%20a%20member%20function%3F",
+      "correct_answer": "this.values()",
+      "incorrect_answers": [
+        "this.getState()",
+        "this.prototype.stateValue",
+        "this.state"
+      ]
+    },
+    {
+      "category": "ReactJS",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Props%20are%20 __________ %20into%20other%20components",
+      "correct_answer": "Methods",
+      "incorrect_answers": ["Injected", "Both%20A%20and%20B", "All%20of%20these"]
+    },
+    {
+      "category": "ReactJS",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which%20of%20the%20following%20API%20is%20a%20MUST%20for%20every%20ReactJS%20component%3F",
+      "correct_answer": "renderComponent",
+      "incorrect_answers": [
+        "getInitialState",
+        "render",
+        "None"
+      ]
+    },
+    {
+      "category": "ReactJS",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What%20is%20a%20reactjs%20in%20MVC%3F",
+      "correct_answer": "Controller",
+      "incorrect_answers": ["Middleware", "Model", "Model"]
+    }
+  ]
+  
